@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: rgb(8, 8, 58);
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/*Button*/
+.button {
+  background-color: rgb(12, 5, 77);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  
+
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 80%; /* IE10 */
+  flex: 80%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CodeIt</h1>
+  <p>Like a Pro!</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Python</a>
+  <a href="#">Java</a>
+  <a href="login.html"  target="_blank" class="right">Login</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <a href="/back.html" target="Sidebar">My Learning</a>
+  </div>
+
+  <div class="main">
+    <h2>Python</h2>
+    <h5>This module contains 3 videos</h5>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video1" readonly>
+      <input type="submit" name="video1" value="Video 1">
+    </form>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video2" readonly>
+      <input type="submit" name="video2" value="Video 2">
+    </form>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video3" readonly>
+      <input type="submit" name="video3" value="Video 3">
+    </form>
+    
+    <p>Python programming language</p>
+    <p>Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.</p>
+    <br>
+    <br>
+    <h2>Java</h2>
+    <h5>This module contains 3 videos</h5>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video1" readonly>
+      <input type="submit" name="video1" value="Video 1">
+    </form>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video2" readonly>
+      <input type="submit" name="video2" value="Video 2">
+    </form>
+    <form action="/video" method="POST">
+      <input type="text" name="video" value="video3" readonly>
+      <input type="submit" name="video3" value="Video 3">
+    </form>
+    <p>Java programming language</p>
+    <p>Java is a general-purpose programming language that is class-based, object-oriented, and designed to have as few implementation dependencies as possible.</p>
+  </div>
+</div>
+
+</body>
+</html>
